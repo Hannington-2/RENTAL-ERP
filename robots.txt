@@ -1,0 +1,27 @@
+# Robots.txt for RentFlow Pro
+# https://rentflowpro.co.ke
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rentflowpro.co.ke/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
+# Disallow admin/private areas
+Disallow: /api/
+Disallow: /dashboard-
+Disallow: /uploads/
+Disallow: /node_modules/
+
+# Allow public pages
+Allow: /index.html
+Allow: /how-it-works.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /get-started.html
+Allow: /reviews.html
+Allow: /login.html
+Allow: /register.html

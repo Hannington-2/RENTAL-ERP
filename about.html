@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RentFlow Pro - Rental Management Platform | Company Info</title>
+    <meta name="description" content="Learn about RentFlow Pro's mission to transform rental management for landlords and tenants across Kenya. Meet our team and discover our story.">
+    <meta name="keywords" content="about RentFlow Pro, rental management company Kenya, property management software, our team, company mission">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About Us | RentFlow Pro - Rental Management Platform">
+    <meta property="og:description" content="Learn about RentFlow Pro's mission to transform rental management for landlords and tenants across Kenya.">
+    <link rel="canonical" href="https://rentflowpro.co.ke/about.html">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #DBEAFE;
+            --secondary: #0F172A;
+            --accent: #F59E0B;
+            --success: #10B981;
+            --danger: #EF4444;
+            --dark: #1E293B;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: var(--gray-100);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: white;
+            padding: 0 2rem;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            font-size: 1.75rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1E3A5F 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .header h1 span {
+            color: #60A5FA;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content p {
+            color: var(--gray-500);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-image {
+            background: white;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 4rem 2rem;
+        }
+        
+        .stats-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            color: white;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .team-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: var(--gray-500);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gray-100);
+            border-radius: 14px;
+            transition: all 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            margin: 0 auto 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-avatar i {
+            font-size: 3rem;
+            color: var(--primary);
+        }
+        
+        .team-card h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .team-card .role {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+        
+        .team-card p {
+            color: var(--gray-500);
+            font-size: 0.85rem;
+        }
+        
+        /* Awards Section */
+        .awards-section {
+            padding: 4rem 2rem;
+            background: var(--gray-100);
+        }
+        
+        .awards-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .awards-grid {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .award-item {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .award-item i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+        
+        .award-item h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .testimonials-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .testimonial-card {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 14px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            position: relative;
+            z-index: 1;
+            color: var(--gray-500);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-avatar i {
+            color: var(--primary);
+        }
+        
+        .author-info h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+        
+        /* Client Logos */
+        .logos-section {
+            padding: 4rem 2rem;
+            background: var(--gray-100);
+        }
+        
+        .logos-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .logo-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo-item i {
+            font-size: 2rem;
+            color: var(--gray-400);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta .btn {
+            background: white;
+            color: var(--primary);
+            padding: 0.875rem 2rem;
+        }
+        
+        .cta .btn:hover {
+            background: var(--gray-100);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-brand p {
+            color: var(--gray-400);
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-700);
+            text-align: center;
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .about-grid, .stats-grid, .team-grid, .testimonials-grid, .logos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .awards-grid {
+                flex-direction: column;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-building"></i>
+            RentFlow Pro
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="reviews.html">Reviews</a>
+        </div>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="get-started.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="header">
+        <div class="header-content">
+            <h1>About <span>RentFlow Pro</span></h1>
+            <p>Our mission is to simplify rental management for landlords and tenants across Kenya with secure, automated, and modern technology.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>RentFlow Pro was founded in 2023 with a clear vision: to transform how rental properties are managed across Kenya. We recognized that landlords and tenants were struggling with manual rent collection, paper-based record keeping, and communication challenges.</p>
+                <p>Our team combined expertise in real estate management and technology to create a comprehensive platform that addresses these pain points. Since launch, we've helped thousands of property managers streamline their operations and provided tenants with a convenient way to manage their rental payments.</p>
+                <p>Today, RentFlow Pro continues to innovate, adding new features and expanding our reach to serve the growing needs of the rental market in Kenya and beyond.</p>
+            </div>
+            
+            <div class="about-image">
+                <img src="https://placehold.co/500x400/e2e8f0/1e293b?text=Our+Team+at+Work" alt="RentFlow Pro Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>2,500+</h3>
+                    <p>Properties Managed</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>15,000+</h3>
+                    <p>Tenants Served</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>KSh 500M+</h3>
+                    <p>Payments Processed</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>99.9%</h3>
+                    <p>Uptime Reliability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>The passionate people behind RentFlow Pro who are dedicated to revolutionizing rental management.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>David Ochieng</h4>
+                    <p class="role">CEO & Co-Founder</p>
+                    <p>15+ years in real estate and property management.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Sarah Wanjiku</h4>
+                    <p class="role">CTO & Co-Founder</p>
+                    <p>Tech leader with expertise in fintech solutions.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Michael Kamau</h4>
+                    <p class="role">Head of Operations</p>
+                    <p>Operations expert focused on customer success.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Grace Akinyi</h4>
+                    <p class="role">Head of Customer Support</p>
+                    <p>Dedicated to providing excellent user support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards-section">
+        <div class="awards-container">
+            <div class="section-header">
+                <h2>Awards & Recognition</h2>
+                <p>Industry recognition for our innovative approach to rental management.</p>
+            </div>
+            
+            <div class="awards-grid">
+                <div class="award-item">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Best PropTech Startup 2024</h4>
+                </div>
+                
+                <div class="award-item">
+                    <i class="fas fa-award"></i>
+                    <h4>Innovation Excellence</h4>
+                </div>
+                
+                <div class="award-item">
+                    <i class="fas fa-medal"></i>
+                    <h4>Customer Choice Award</h4>
+                </div>
+                
+                <div class="award-item">
+                    <i class="fas fa-certificate"></i>
+                    <h4>ISO 27001 Certified</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from landlords and tenants who use RentFlow Pro every day.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"RentFlow Pro has transformed how I manage my properties. Rent collection is now automatic, and I have all my financial records in one place."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>James Mwangi</h5>
+                            <span>Property Owner, Nairobi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a tenant, I love the convenience of paying rent via M-Pesa. The reminders help me never miss a payment, and the receipts are always available."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Faith Nekesa</h5>
+                            <span>Tenant, Mombasa</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The platform is intuitive and the support team is always responsive. I recommend RentFlow Pro to all my fellow property managers."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Robert Odhiambo</h5>
+                            <span>Property Manager, Kisumu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="logos-section">
+        <div class="logos-container">
+            <div class="section-header">
+                <h2>Trusted By Leading Property Managers</h2>
+            </div>
+            
+            <div class="logos-grid">
+                <div class="logo-item">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-city"></i>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-house-user"></i>
+                </div>
+                <div class="logo-item">
+                    <i class="fas fa-apartment"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Join the RentFlow Pro Family</h2>
+        <p>Start managing your rentals smarter, faster, and more securely today.</p>
+        <a href="get-started.html" class="btn">Get Started Free</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-building"></i>
+                    RentFlow Pro
+                </a>
+                <p>The complete rental property management solution for landlords and tenants in Kenya.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="get-started.html">Get Started</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="license.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 RentFlow Pro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

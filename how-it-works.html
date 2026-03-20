@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | RentFlow Pro - Rental Management Platform | Step-by-Step Guide</title>
+    <meta name="description" content="Learn how RentFlow Pro simplifies rental management in Kenya. Step-by-step guide from landlord registration to automated M-Pesa rent collection and digital receipts.">
+    <meta name="keywords" content="how rental management works, landlord software Kenya, M-Pesa rent collection guide, property management tutorial, tenant management system">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="How It Works | RentFlow Pro - Rental Management Platform">
+    <meta property="og:description" content="Step-by-step guide to using RentFlow Pro for landlords and tenants in Kenya.">
+    <link rel="canonical" href="https://rentflowpro.co.ke/how-it-works.html">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #DBEAFE;
+            --secondary: #0F172A;
+            --accent: #F59E0B;
+            --success: #10B981;
+            --danger: #EF4444;
+            --dark: #1E293B;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: var(--gray-100);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: white;
+            padding: 0 2rem;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            font-size: 1.75rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1E3A5F 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .header h1 span {
+            color: #60A5FA;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Timeline Section */
+        .timeline-section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: var(--gray-500);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            max-width: 450px;
+            margin-right: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 0;
+            margin-left: 2rem;
+        }
+        
+        .timeline-number {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            right: -25px;
+            top: 20px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-number {
+            right: auto;
+            left: -25px;
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .timeline-content p {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+        }
+        
+        .timeline-content ul {
+            margin-top: 1rem;
+            padding-left: 1.25rem;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+        
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Features Grid */
+        .features-section {
+            background: white;
+            padding: 5rem 2rem;
+        }
+        
+        .features-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .feature-card {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 14px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+        }
+        
+        .feature-icon i {
+            font-size: 1.75rem;
+            color: var(--primary);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-card p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+        
+        /* Automation Section */
+        .automation-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1E3A5F 100%);
+            padding: 5rem 2rem;
+            color: white;
+        }
+        
+        .automation-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .automation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .automation-content h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .automation-content p {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            margin-bottom: 2rem;
+        }
+        
+        .automation-list {
+            list-style: none;
+        }
+        
+        .automation-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .automation-list i {
+            color: var(--success);
+            font-size: 1.25rem;
+            margin-top: 0.25rem;
+        }
+        
+        .automation-list .item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .automation-list .item-desc {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+        }
+        
+        .automation-image {
+            background: white;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .automation-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        
+        /* Security Section */
+        .security-section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .security-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .security-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .security-header p {
+            color: var(--gray-500);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .security-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+        }
+        
+        .security-item i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .security-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .security-item p {
+            color: var(--gray-500);
+            font-size: 0.85rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta .btn {
+            background: white;
+            color: var(--primary);
+            padding: 0.875rem 2rem;
+        }
+        
+        .cta .btn:hover {
+            background: var(--gray-100);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-brand p {
+            color: var(--gray-400);
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-700);
+            text-align: center;
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                left: 25px;
+            }
+            
+            .timeline-item, .timeline-item:nth-child(even) {
+                padding-left: 75px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+            
+            .timeline-content, .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .timeline-number, .timeline-item:nth-child(even) .timeline-number {
+                left: 0;
+                right: auto;
+            }
+            
+            .features-grid, .automation-grid, .security-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-building"></i>
+            RentFlow Pro
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="how-it-works.html" class="active">How It Works</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="reviews.html">Reviews</a>
+        </div>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="get-started.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="header">
+        <div class="header-content">
+            <h1>How Our Rental Management <span>Platform Works</span></h1>
+            <p>Simple, secure, and automated rental management for landlords and tenants. From registration to rent collection in a few easy steps.</p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="section-header">
+            <h2>Step-by-Step Process</h2>
+            <p>Get started with RentFlow Pro in minutes. Our streamlined process makes rental management effortless.</p>
+        </div>
+        
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">1</div>
+                    <h3>Landlord Registration</h3>
+                    <p>Sign up as a landlord or property manager. Verify your email to secure your account and access your dashboard.</p>
+                    <ul>
+                        <li>Create your account in seconds</li>
+                        <li>Verify email address</li>
+                        <li>Set up your landlord profile</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">2</div>
+                    <h3>Add Properties & Tenants</h3>
+                    <p>Add your properties to the platform and invite tenants by entering their name and email address.</p>
+                    <ul>
+                        <li>Add multiple properties</li>
+                        <li>Create tenant invitations</li>
+                        <li>Set rent amounts and due dates</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">3</div>
+                    <h3>Tenant Verification</h3>
+                    <p>Tenants receive a verification email, create their account, and upload required documents.</p>
+                    <ul>
+                        <li>Email verification</li>
+                        <li>Document upload</li>
+                        <li>Profile completion</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">4</div>
+                    <h3>Automated Payments</h3>
+                    <p>Tenants receive rent reminders, make payments via M-Pesa STK Push, and receive instant confirmation.</p>
+                    <ul>
+                        <li>Automated rent reminders</li>
+                        <li>One-click M-Pesa payments</li>
+                        <li>Instant payment verification</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-number">5</div>
+                    <h3>Receipts & Reports</h3>
+                    <p>Digital receipts are auto-generated for every payment. Landlords can track payments and generate reports.</p>
+                    <ul>
+                        <li>Auto-generated receipts</li>
+                        <li>Payment tracking</li>
+                        <li>Financial reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <div class="section-header">
+                <h2>Role-Based Access</h2>
+                <p>Each user gets a tailored dashboard with features specific to their role.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Landlord Dashboard</h3>
+                    <p>Manage properties, track payments, view tenant details, and generate financial reports.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Tenant Dashboard</h3>
+                    <p>View rent due dates, make payments, download receipts, and communicate with landlords.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Admin Dashboard</h3>
+                    <p>Full platform control, user management, system settings, and comprehensive analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Section -->
+    <section class="automation-section">
+        <div class="automation-container">
+            <div class="automation-grid">
+                <div class="automation-content">
+                    <h2>Powerful Automation</h2>
+                    <p>Let RentFlow Pro handle the repetitive tasks so you can focus on what matters.</p>
+                    
+                    <ul class="automation-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <div class="item-title">Automated Rent Reminders</div>
+                                <div class="item-desc">Tenants receive timely reminders before rent due dates.</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <div class="item-title">STK Push Payments</div>
+                                <div class="item-desc">Secure M-Pesa integration for instant rent collection.</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <div class="item-title">Auto-Generated Receipts</div>
+                                <div class="item-desc">Digital receipts created instantly after every payment.</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <div class="item-title">Late Payment Alerts</div>
+                                <div class="item-desc">Automatic notifications for overdue payments.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="automation-image">
+                    <img src="https://placehold.co/500x400/e2e8f0/1e293b?text=Automation+Dashboard" alt="Automation Features">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security-section">
+        <div class="security-header">
+            <h2>Security & Trust</h2>
+            <p>We take security seriously with industry-leading measures to protect your data.</p>
+        </div>
+        
+        <div class="security-grid">
+            <div class="security-item">
+                <i class="fas fa-envelope-verified"></i>
+                <h4>Email Verification</h4>
+                <p>All accounts require email verification before activation.</p>
+            </div>
+            
+            <div class="security-item">
+                <i class="fas fa-lock"></i>
+                <h4>Secure Payments</h4>
+                <p>M-Pesa integration with secure STK Push authentication.</p>
+            </div>
+            
+            <div class="security-item">
+                <i class="fas fa-shield-halved"></i>
+                <h4>Data Encryption</h4>
+                <p>Your data is encrypted and stored securely.</p>
+            </div>
+            
+            <div class="security-item">
+                <i class="fas fa-user-check"></i>
+                <h4>Role-Based Access</h4>
+                <p>Strict access controls for different user types.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready to Get Started?</h2>
+        <p>Join thousands of landlords and tenants who trust RentFlow Pro for their rental management needs.</p>
+        <a href="get-started.html" class="btn">Create Free Account</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-building"></i>
+                    RentFlow Pro
+                </a>
+                <p>The complete rental property management solution for landlords and tenants in Kenya.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="get-started.html">Get Started</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="license.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 RentFlow Pro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

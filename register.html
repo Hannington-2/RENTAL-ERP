@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - RentFlow Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #DBEAFE;
+            --secondary: #0F172A;
+            --success: #10B981;
+            --danger: #EF4444;
+            --warning: #F59E0B;
+            --dark: #1E293B;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --border: #E2E8F0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .register-container {
+            background: white;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .register-header {
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+            color: white;
+            padding: 2rem 2rem 1.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .register-header .logo {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .register-header h1 {
+            font-size: 1.375rem;
+            font-weight: 700;
+        }
+        
+        .register-header p {
+            opacity: 0.9;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+        
+        .register-form {
+            padding: 1.5rem 2rem 2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.375rem;
+            font-weight: 500;
+            color: #374151;
+            font-size: 0.875rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.625rem 0.875rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .form-group input::placeholder {
+            color: var(--gray-400);
+        }
+        
+        .form-group .hint {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            margin-top: 0.25rem;
+        }
+        
+        .btn-register {
+            width: 100%;
+            padding: 0.875rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .btn-register:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-register:disabled {
+            background: var(--gray-400);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .trial-notice {
+            background: #F0FDF4;
+            border: 1px solid #BBF7D0;
+            border-radius: 10px;
+            padding: 0.875rem;
+            margin-bottom: 1.25rem;
+            text-align: center;
+        }
+        
+        .trial-notice h4 {
+            color: #166534;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .trial-notice p {
+            color: #15803D;
+            font-size: 0.8rem;
+        }
+        
+        .terms {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            text-align: center;
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+        
+        .terms a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .terms a:hover {
+            text-decoration: underline;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 1.25rem;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+        
+        .login-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            background: #FEE2E2;
+            color: #991B1B;
+            padding: 0.75rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .error-message.show {
+            display: flex;
+        }
+        
+        .success-message {
+            background: #D1FAE5;
+            color: #065F46;
+            padding: 0.75rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .success-message.show {
+            display: flex;
+        }
+        
+        .loading .btn-text {
+            display: none;
+        }
+        
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            display: none;
+        }
+        
+        .loading .spinner {
+            display: block;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 480px) {
+            .register-container {
+                max-width: 100%;
+            }
+            
+            .register-form {
+                padding: 1.25rem 1.5rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <div class="logo">
+                <i class="fas fa-building"></i>
+            </div>
+            <h1>Create Account</h1>
+            <p>Start your 14-day free trial</p>
+        </div>
+        
+        <div class="register-form">
+            <div id="errorMessage" class="error-message">
+                <i class="fas fa-exclamation-circle"></i>
+                <span></span>
+            </div>
+            
+            <div id="successMessage" class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <span></span>
+            </div>
+            
+            <div class="trial-notice">
+                <h4><i class="fas fa-gift"></i> 14-Day Free Trial</h4>
+                <p>No credit card required. Full access to all features.</p>
+            </div>
+            
+            <form id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="254700000000" required>
+                    <div class="hint">For M-Pesa payments and notifications</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="idNumber">National ID Number</label>
+                    <input type="text" id="idNumber" placeholder="12345678" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="role">I am a...</label>
+                    <select id="role" required onchange="toggleInviteSection()">
+                        <option value="">Select your role</option>
+                        <option value="landlord">Landlord / Property Owner</option>
+                        <option value="caretaker">Caretaker</option>
+                        <option value="tenant">Tenant</option>
+                    </select>
+                </div>
+                
+                <!-- Invite Section for Landlords -->
+                <div id="inviteSection" style="display: none; margin-bottom: 1.5rem; padding: 1rem; background: var(--gray-100); border-radius: 8px;">
+                    <h4 style="margin-bottom: 1rem; color: var(--primary);"><i class="fas fa-user-plus"></i> Invite People (Optional)</h4>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-bottom: 1rem;">Invite tenants or caretakers now to get started quickly!</p>
+                    
+                    <!-- Invite Tenants -->
+                    <div style="margin-bottom: 1rem;">
+                        <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Invite Tenants</label>
+                        <div id="tenantInvites">
+                            <div class="tenant-invite-row" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <input type="text" class="tenant-name" placeholder="Tenant Name" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                                <input type="email" class="tenant-email" placeholder="Tenant Email" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                            </div>
+                        </div>
+                        <button type="button" onclick="addTenantInvite()" style="font-size: 0.75rem; color: var(--primary); background: none; border: none; cursor: pointer;">
+                            <i class="fas fa-plus"></i> Add Another Tenant
+                        </button>
+                    </div>
+                    
+                    <!-- Invite Caretakers -->
+                    <div>
+                        <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Invite Caretakers</label>
+                        <div id="caretakerInvites">
+                            <div class="caretaker-invite-row" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <input type="text" class="caretaker-name" placeholder="Caretaker Name" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                                <input type="email" class="caretaker-email" placeholder="Caretaker Email" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                                <input type="tel" class="caretaker-phone" placeholder="Phone Number" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                            </div>
+                        </div>
+                        <button type="button" onclick="addCaretakerInvite()" style="font-size: 0.75rem; color: var(--primary); background: none; border: none; cursor: pointer;">
+                            <i class="fas fa-plus"></i> Add Another Caretaker
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Create password" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-register" id="registerBtn">
+                    <span class="btn-text"><i class="fas fa-user-plus"></i> Create Account</span>
+                    <span class="spinner"></span>
+                </button>
+            </form>
+            
+            <p class="terms">
+                By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </p>
+            
+            <p class="login-link">
+                Already have an account? <a href="login.html">Sign in</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Toggle invite section based on role
+        function toggleInviteSection() {
+            const role = document.getElementById('role').value;
+            const inviteSection = document.getElementById('inviteSection');
+            
+            if (role === 'landlord') {
+                inviteSection.style.display = 'block';
+            } else {
+                inviteSection.style.display = 'none';
+            }
+        }
+        
+        // Add another tenant invite field
+        function addTenantInvite() {
+            const container = document.getElementById('tenantInvites');
+            const row = document.createElement('div');
+            row.className = 'tenant-invite-row';
+            row.style.display = 'flex';
+            row.style.gap = '0.5rem';
+            row.style.marginBottom = '0.5rem';
+            row.innerHTML = `
+                <input type="text" class="tenant-name" placeholder="Tenant Name" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                <input type="email" class="tenant-email" placeholder="Tenant Email" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                <button type="button" onclick="this.parentElement.remove()" style="background: var(--danger); color: white; border: none; border-radius: 4px; cursor: pointer; padding: 0 0.5rem;">&times;</button>
+            `;
+            container.appendChild(row);
+        }
+        
+        // Add another caretaker invite field
+        function addCaretakerInvite() {
+            const container = document.getElementById('caretakerInvites');
+            const row = document.createElement('div');
+            row.className = 'caretaker-invite-row';
+            row.style.display = 'flex';
+            row.style.gap = '0.5rem';
+            row.style.marginBottom = '0.5rem';
+            row.innerHTML = `
+                <input type="text" class="caretaker-name" placeholder="Caretaker Name" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                <input type="email" class="caretaker-email" placeholder="Caretaker Email" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                <input type="tel" class="caretaker-phone" placeholder="Phone Number" style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-300); border-radius: 4px;">
+                <button type="button" onclick="this.parentElement.remove()" style="background: var(--danger); color: white; border: none; border-radius: 4px; cursor: pointer; padding: 0 0.5rem;">&times;</button>
+            `;
+            container.appendChild(row);
+        }
+        
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const idNumber = document.getElementById('idNumber').value.trim();
+            const role = document.getElementById('role').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Collect invited tenants
+            const tenantInvites = [];
+            const tenantRows = document.querySelectorAll('.tenant-invite-row');
+            if (tenantRows) {
+                tenantRows.forEach(row => {
+                    const nameInput = row.querySelector('.tenant-name');
+                    const emailInput = row.querySelector('.tenant-email');
+                    if (nameInput && emailInput) {
+                        const name = nameInput.value.trim();
+                        const email = emailInput.value.trim();
+                        if (name && email) {
+                            tenantInvites.push({ name, email });
+                        }
+                    }
+                });
+            }
+            
+            // Collect invited caretakers
+            const caretakerInvites = [];
+            const caretakerRows = document.querySelectorAll('.caretaker-invite-row');
+            if (caretakerRows) {
+                caretakerRows.forEach(row => {
+                    const nameInput = row.querySelector('.caretaker-name');
+                    const emailInput = row.querySelector('.caretaker-email');
+                    const phoneInput = row.querySelector('.caretaker-phone');
+                    if (nameInput && emailInput) {
+                        const name = nameInput.value.trim();
+                        const email = emailInput.value.trim();
+                        const phone = phoneInput ? phoneInput.value.trim() : '';
+                        if (name && email) {
+                            caretakerInvites.push({ name, email, phone });
+                        }
+                    }
+                });
+            }
+            
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            const registerBtn = document.getElementById('registerBtn');
+            
+            // Validation
+            if (password !== confirmPassword) {
+                errorMessage.querySelector('span').textContent = 'Passwords do not match';
+                errorMessage.classList.add('show');
+                return;
+            }
+            
+            if (password.length < 6) {
+                errorMessage.querySelector('span').textContent = 'Password must be at least 6 characters';
+                errorMessage.classList.add('show');
+                return;
+            }
+            
+            if (!role) {
+                errorMessage.querySelector('span').textContent = 'Please select your role';
+                errorMessage.classList.add('show');
+                return;
+            }
+            
+            errorMessage.classList.remove('show');
+            successMessage.classList.remove('show');
+            registerBtn.classList.add('loading');
+            registerBtn.disabled = true;
+            
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstName,
+                        lastName,
+                        email,
+                        phone,
+                        idNumber,
+                        role,
+                        password,
+                        tenantInvites,
+                        caretakerInvites
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Send invitation emails if any
+                    if ((tenantInvites.length > 0 || caretakerInvites.length > 0) && data.userId) {
+                        try {
+                            await fetch('/api/invitations/send', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    landlordId: data.userId,
+                                    tenantInvites,
+                                    caretakerInvites
+                                })
+                            });
+                        } catch (e) {
+                            console.log('Invitation sending skipped');
+                        }
+                    }
+                    
+                    successMessage.querySelector('span').textContent = 'Account created! Redirecting to login...';
+                    successMessage.classList.add('show');
+                    
+                    setTimeout(() => {
+                        window.location.href = '/login';
+                    }, 2000);
+                } else {
+                    errorMessage.querySelector('span').textContent = data.error || 'Registration failed. Please try again.';
+                    errorMessage.classList.add('show');
+                }
+            } catch (error) {
+                errorMessage.querySelector('span').textContent = 'Connection error. Please try again.';
+                errorMessage.classList.add('show');
+            } finally {
+                registerBtn.classList.remove('loading');
+                registerBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

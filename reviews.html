@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews & Testimonials | RentFlow Pro - Customer Feedback</title>
+    <meta name="description" content="Read reviews from landlords and tenants who use RentFlow Pro. See why thousands trust our rental management platform in Kenya.">
+    <meta name="keywords" content="reviews, testimonials, customer feedback, landlord reviews, tenant reviews, RentFlow Pro ratings, property management software reviews">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Reviews & Testimonials | RentFlow Pro - Customer Feedback">
+    <meta property="og:description" content="Read reviews from landlords and tenants who use RentFlow Pro.">
+    <link rel="canonical" href="https://rentflowpro.co.ke/reviews.html">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #DBEAFE;
+            --secondary: #0F172A;
+            --accent: #F59E0B;
+            --success: #10B981;
+            --danger: #EF4444;
+            --dark: #1E293B;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: var(--gray-100);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: white;
+            padding: 0 2rem;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            font-size: 1.75rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1E3A5F 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .header h1 span {
+            color: #60A5FA;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Rating Summary */
+        .rating-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .rating-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .rating-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .rating-overview {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gray-100);
+            border-radius: 16px;
+        }
+        
+        .rating-number {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+        
+        .rating-stars {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 0.75rem 0;
+        }
+        
+        .rating-stars i {
+            margin: 0 0.125rem;
+        }
+        
+        .rating-count {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+        }
+        
+        .rating-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .rating-bar span {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            width: 60px;
+        }
+        
+        .bar-container {
+            flex: 1;
+            height: 12px;
+            background: var(--gray-200);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .bar-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 6px;
+        }
+        
+        .bar-count {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            width: 40px;
+            text-align: right;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            color: var(--gray-500);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .testimonial-avatar {
+            width: 55px;
+            height: 55px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .testimonial-avatar i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.125rem;
+        }
+        
+        .testimonial-info .role {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+        
+        .testimonial-rating {
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        .testimonial-date {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--gray-400);
+        }
+        
+        /* Features Praised Section */
+        .features-praised {
+            background: white;
+            padding: 5rem 2rem;
+        }
+        
+        .features-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--gray-100);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        
+        .feature-item:hover {
+            background: var(--primary-light);
+        }
+        
+        .feature-item i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-item p {
+            color: var(--gray-500);
+            font-size: 0.85rem;
+        }
+        
+        /* Reviews List */
+        .reviews-list {
+            padding: 5rem 2rem;
+            background: var(--gray-100);
+        }
+        
+        .reviews-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .review-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+        }
+        
+        /* Reviews Count */
+        .reviews-count {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        
+        /* Show More Button */
+        .show-more-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .show-more-btn {
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .show-more-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .show-more-btn i {
+            transition: transform 0.3s ease;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .review-user {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            background: var(--gray-200);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .review-avatar i {
+            color: var(--gray-500);
+        }
+        
+        .review-user-info h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .review-user-info span {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+        
+        .review-rating {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        .review-content {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .review-footer {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-100);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--gray-400);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta .btn {
+            background: white;
+            color: var(--primary);
+            padding: 0.875rem 2rem;
+        }
+        
+        .cta .btn:hover {
+            background: var(--gray-100);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-brand p {
+            color: var(--gray-400);
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-700);
+            text-align: center;
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .rating-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid, .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-building"></i>
+            RentFlow Pro
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="reviews.html" class="active">Reviews</a>
+        </div>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="get-started.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="header">
+        <div class="header-content">
+            <h1>What Our <span>Users Say</span></h1>
+            <p>Read real reviews from landlords and tenants who use RentFlow Pro to manage their rentals.</p>
+        </div>
+    </section>
+
+    <!-- Rating Summary -->
+    <section class="rating-section">
+        <div class="rating-container">
+            <div class="rating-grid">
+                <div class="rating-overview">
+                    <div class="rating-number">4.8</div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="rating-count">Based on 1,247 reviews</p>
+                </div>
+                
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <span>5 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 78%;"></div>
+                        </div>
+                        <span class="bar-count">973</span>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <span>4 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 15%;"></div>
+                        </div>
+                        <span class="bar-count">187</span>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <span>3 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 5%;"></div>
+                        </div>
+                        <span class="bar-count">62</span>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <span>2 stars</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 1.5%;"></div>
+                        </div>
+                        <span class="bar-count">19</span>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <span>1 star</span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 0.5%;"></div>
+                        </div>
+                        <span class="bar-count">6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <h2>Featured Testimonials</h2>
+            <p>Hear from some of our satisfied users across Kenya</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>James Mwangi</h4>
+                        <p class="role">Property Owner, Nairobi</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"RentFlow Pro has completely transformed how I manage my 12 rental properties. The automated rent reminders and M-Pesa integration have saved me countless hours. I can't imagine going back to manual collection!"</p>
+                <p class="testimonial-date">January 2024</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Faith Nekesa</h4>
+                        <p class="role">Tenant, Mombasa</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"As a tenant, I love the convenience. Paying rent is now as easy as a few taps on my phone. The payment reminders help me never miss a due date, and I always have my receipts available instantly."</p>
+                <p class="testimonial-date">February 2024</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Robert Odhiambo</h4>
+                        <p class="role">Property Manager, Kisumu</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-text">"Managing 45 units across different buildings used to be chaotic. With RentFlow Pro, I have everything organized in one place. The financial reports are especially helpful for tax season."</p>
+                <p class="testimonial-date">December 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Praised Section -->
+    <section class="features-praised">
+        <div class="features-container">
+            <div class="section-header">
+                <h2>What Users Love Most</h2>
+                <p>The top features that our users praise</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Easy Payments</h4>
+                    <p>Pay rent via M-Pesa with just a few taps</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-bell"></i>
+                    <h4>Smart Reminders</h4>
+                    <p>Never miss a payment with automated alerts</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h4>Instant Receipts</h4>
+                    <p>Digital receipts generated automatically</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Financial Reports</h4>
+                    <p>Track income and expenses easily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews List -->
+    <section class="reviews-list">
+        <div class="reviews-container">
+            <div class="section-header">
+                <h2>All Reviews</h2>
+                <p class="reviews-count">Showing <span id="showingCount">3</span> of <span id="totalCount">5</span> reviews</p>
+            </div>
+            
+            <!-- Initial Reviews (visible) -->
+            <div id="initialReviews">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-user">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-user-info">
+                                <h5>Samuel Kiptoo</h5>
+                                <span>Landlord, Nakuru</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-content">"Excellent platform! The tenant verification feature gives me peace of mind knowing who I'm renting to. The dashboard is intuitive and the support team is very responsive."</p>
+                    <div class="review-footer">
+                        <span>Verified User</span>
+                        <span>2 weeks ago</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-user">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-user-info">
+                                <h5>Grace Atieno</h5>
+                                <span>Tenant, Eldoret</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-content">"Finally, a rental platform that works! I can pay my rent from anywhere, anytime. The STK push feature is incredibly convenient. Highly recommend to all tenants!"</p>
+                    <div class="review-footer">
+                        <span>Verified User</span>
+                        <span>1 month ago</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-user">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-user-info">
+                                <h5>David Njoroge</h5>
+                                <span>Property Manager, Nairobi</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-content">"Great tool for property management. Would love to see a mobile app in the future. The web interface works well though. Has made my work much easier."</p>
+                    <div class="review-footer">
+                        <span>Verified User</span>
+                        <span>1 month ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden Reviews (shown on click) -->
+            <div id="moreReviews" style="display: none;">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-user">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-user-info">
+                                <h5>Mary Wanjiku</h5>
+                                <span>Landlord, Thika</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-content">"I've tried several property management systems, and RentFlow Pro is by far the best for the Kenyan market. The M-Pesa integration is seamless. My tenants love it too!"</p>
+                    <div class="review-footer">
+                        <span>Verified User</span>
+                        <span>2 months ago</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-user">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-user-info">
+                                <h5>Kevin Ouma</h5>
+                                <span>Tenant, Nairobi</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-content">"The transparency is amazing. I can see exactly what I owe, when I owe it, and get my receipt immediately after payment. No more confusion about rent balances!"</p>
+                    <div class="review-footer">
+                        <span>Verified User</span>
+                        <span>3 months ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Show More Button -->
+            <div class="show-more-container" id="showMoreContainer">
+                <button class="show-more-btn" id="showMoreBtn" onclick="showMoreReviews()">
+                    <span>Show More Reviews</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Review CTA -->
+    <section class="cta">
+        <h2>Share Your Experience</h2>
+        <p>Have you used RentFlow Pro? We'd love to hear about your experience!</p>
+        <a href="#" class="btn" id="submitReviewBtn">Submit Your Review</a>
+    </section>
+    
+    <script>
+        // Show More Reviews Function
+        function showMoreReviews() {
+            const moreReviews = document.getElementById('moreReviews');
+            const showMoreBtn = document.getElementById('showMoreBtn');
+            const showingCount = document.getElementById('showingCount');
+            const totalCount = document.getElementById('totalCount');
+            
+            if (moreReviews.style.display === 'none') {
+                moreReviews.style.display = 'block';
+                showMoreBtn.innerHTML = '<span>Show Less</span><i class="fas fa-chevron-up"></i>';
+                showingCount.textContent = totalCount.textContent;
+            } else {
+                moreReviews.style.display = 'none';
+                showMoreBtn.innerHTML = '<span>Show More Reviews</span><i class="fas fa-chevron-down"></i>';
+                showingCount.textContent = '3';
+            }
+        }
+    </script>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Join Thousands of Happy Users</h2>
+        <p>Start managing your rentals the smart way today. Sign up for free and experience the difference.</p>
+        <a href="get-started.html" class="btn">Get Started Free</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-building"></i>
+                    RentFlow Pro
+                </a>
+                <p>The complete rental property management solution for landlords and tenants in Kenya.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="get-started.html">Get Started</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="license.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 RentFlow Pro. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Load testimonials from API
+        async function loadTestimonials() {
+            try {
+                const response = await fetch('/api/testimonials');
+                const data = await response.json();
+                
+                if (data.testimonials && data.testimonials.length > 0) {
+                    updateTestimonialsSection(data.testimonials);
+                    updateReviewsList(data.testimonials);
+                }
+            } catch (error) {
+                console.log('Using static testimonials');
+            }
+        }
+        
+        function updateTestimonialsSection(testimonials) {
+            const featured = testimonials.slice(0, 3);
+            const container = document.querySelector('.testimonials-grid');
+            if (!container) return;
+            
+            container.innerHTML = featured.map(t => `
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>${t.name}</h4>
+                            <p class="role">${t.role}${t.company ? ', ' + t.company : ''}</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        ${'<i class="fas fa-star"></i>'.repeat(t.rating)}
+                        ${'<i class="far fa-star"></i>'.repeat(5 - t.rating)}
+                    </div>
+                    <p class="testimonial-text">"${t.content}"</p>
+                    <p class="testimonial-date">${new Date(t.created_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
+                </div>
+            `).join('');
+        }
+        
+        function updateReviewsList(testimonials) {
+            const container = document.querySelector('.reviews-container .review-card');
+            if (!container) return;
+            
+            // Keep the section header, update cards
+            const header = document.querySelector('.reviews-container .section-header');
+            const reviewsContainer = document.querySelector('.reviews-container');
+            
+            // Remove old review cards
+            const oldCards = reviewsContainer.querySelectorAll('.review-card');
+            oldCards.forEach(card => card.remove());
+            
+            // Add new review cards
+            testimonials.forEach(t => {
+                const card = document.createElement('div');
+                card.className = 'review-card';
+                card.innerHTML = `
+                    <div class="review-header">
+                        <div class="review-user">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-user-info">
+                                <h5>${t.name}</h5>
+                                <span>${t.role}${t.company ? ', ' + t.company : ''}</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            ${'<i class="fas fa-star"></i>'.repeat(t.rating)}
+                            ${'<i class="far fa-star"></i>'.repeat(5 - t.rating)}
+                        </div>
+                    </div>
+                    <p class="review-content">"${t.content}"</p>
+                    <div class="review-footer">
+                        <span>${t.is_verified ? 'Verified User' : 'User'}</span>
+                        <span>${new Date(t.created_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
+                    </div>
+                `;
+                reviewsContainer.appendChild(card);
+            });
+        }
+        
+        // Handle submit review button - with trial check
+        document.getElementById('submitReviewBtn')?.addEventListener('click', async function(e) {
+            e.preventDefault();
+            
+            // Check if user is logged in
+            const token = localStorage.getItem('token');
+            let isTrialUser = false;
+            let trialDaysLeft = 0;
+            
+            if (token) {
+                // Check trial status from API
+                try {
+                    const response = await fetch('/api/user/trial-status', {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                    const data = await response.json();
+                    if (data.success) {
+                        isTrialUser = data.isTrial;
+                        trialDaysLeft = data.daysLeft;
+                    }
+                } catch (err) {
+                    console.log('Could not check trial status');
+                }
+            }
+            
+            // Trial users must wait 14 days
+            if (isTrialUser && trialDaysLeft > 0) {
+                alert(`Thanks for your interest! You can submit a review after your 14-day trial ends. You have ${trialDaysLeft} days remaining in your trial.`);
+                return;
+            }
+            
+            const name = prompt('Please enter your name:');
+            if (!name) return;
+            
+            const role = prompt('Are you a Landlord, Tenant, or Property Manager?');
+            if (!role) return;
+            
+            const rating = prompt('Rate us from 1-5 stars:');
+            if (!rating || rating < 1 || rating > 5) {
+                alert('Please enter a valid rating from 1-5');
+                return;
+            }
+            
+            const content = prompt('Share your experience with RentFlow Pro:');
+            if (!content) return;
+            
+            // Submit testimonial
+            fetch('/api/testimonials', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    ...(token ? { 'Authorization': `Bearer ${token}` } : {})
+                },
+                body: JSON.stringify({
+                    name,
+                    role,
+                    rating: parseInt(rating),
+                    content,
+                    isTrialUser: isTrialUser
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                alert(data.message || 'Thank you! Your review has been submitted and will be published after moderation.');
+            })
+            .catch(err => {
+                alert('Failed to submit review. Please try again.');
+            });
+        });
+        
+        // Load testimonials on page load
+        loadTestimonials();
+    </script>
+</body>
+</html>

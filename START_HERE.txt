@@ -1,0 +1,62 @@
+=============================================
+RENTFLOW - HOW TO START
+=============================================
+
+STEP 1: IMPORT DATABASE
+-----------------------
+1. Open MySQL Workbench
+2. Click on your connection (usually "Local instance MySQL")
+3. Go to File > Open SQL Script...
+4. Browse to this folder and select: setup-empty.sql
+5. Click the lightning bolt icon (Execute) to run it
+6. You should see "Query executed successfully"
+
+STEP 2: INSTALL AND RUN
+------------------------
+1. In Windows, press Windows key + R
+2. Type: cmd
+3. Press Enter
+
+4. Type exactly (copy and paste):
+   cd "c:\Users\oduor\OneDrive\Desktop\WEP PROJECTS\RENTAL ERP"
+
+5. Press Enter
+
+6. Type:
+   npm install
+
+7. Wait for it to finish (may take 1-2 minutes)
+
+8. Then type:
+   npm start
+
+9. Keep this window open!
+
+STEP 3: OPEN THE WEBSITE
+-------------------------
+1. Open Chrome or Edge browser
+2. Go to: http://localhost:3000
+
+STEP 4: REGISTER AND LOGIN
+---------------------------
+1. Click "Get Started" or go to register.html
+2. Fill in your details
+3. Click "Create Account"
+4. Then login with your email and password
+
+=============================================
+TROUBLESHOOTING
+=============================================
+
+If "Cannot connect to server":
+- Make sure you ran "npm start" in Step 2
+- Keep the command window open while using the website
+
+If MySQL error:
+- Make sure MySQL Workbench is open/connected
+- Make sure you ran the setup-empty.sql script
+
+If you close the command window:
+- Reopen cmd and run "npm start" again
+
+=============================================
